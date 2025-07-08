@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Donation Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="POST">
+            <div class="textbox">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="textbox">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+            <input type="submit" value="Login" class="btn">
+            <p class="forgot"><a href="#">Forgot password?</a></p>
+        </form>
+    </div>
+</body>
+</html>
